@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz : L'imparfait — cours de français</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <a href="../">← Tous les quiz</a>
+    <span class="qcount" id="count"></span>
+  </div>
+  <div class="progress"><div id="bar"></div></div>
+  <div id="quiz"></div>
+  <p class="footer">Chinguetti Académie — L'imparfait : un temps du passé</p>
+</div>
+<script>
+window.QUIZ_DATA = {
+  labels: {
+    question: 'Question',
+    good: '✔ Bonne réponse !',
+    bad: '✘ Mauvaise réponse',
+    next: 'Question suivante',
+    result: 'Voir le résultat',
+    restart: 'Recommencer le quiz',
+    m1: 'Parfait ! Tu maîtrises les 7 valeurs de l\'imparfait 🎉',
+    m2: 'Très bien ! Revois les valeurs qui t\'ont manqué.',
+    m3: 'Pas mal. Regarde de nouveau la vidéo et réessaie.',
+    m4: 'Revois la leçon, puis retente ta chance.'
+  },
+  questions: [
+    {
+      q: '« Quand j\'étais petit, je jouais au foot tous les soirs. » Pourquoi emploie-t-on l\'imparfait ici ?',
+      choices: ['Pour une action unique et soudaine', 'Pour une habitude : « tous les soirs », comme une vidéo qui tourne en boucle', 'Pour une action qui aura lieu demain', 'Pour donner un ordre'],
+      answer: 1,
+      explain: 'Avec « tous les jours », « chaque été », « souvent », « le dimanche »... l\'imparfait exprime l\'habitude : ça recommence, encore et encore.'
+    },
+    {
+      q: '« La maison était grande et ses volets étaient bleus. » Quelle valeur de l\'imparfait ?',
+      choices: ['L\'hypothèse', 'La politesse', 'La description : comme une photo, on montre ce qu\'on voit', 'La cause'],
+      answer: 2,
+      explain: 'Décrire, c\'est appuyer sur pause et montrer ce qu\'on voit : les verbes « être », « avoir », « porter », « sembler » reviennent très souvent.'
+    },
+    {
+      q: '« Je lisais quand le téléphone a sonné. » Quel temps joue quel rôle ?',
+      choices: ['« lisais » = l\'événement ; « a sonné » = le décor', '« lisais » (imparfait) = l\'action en cours qui dure ; « a sonné » (passé composé) = l\'événement soudain qui coupe la scène', 'Les deux verbes sont des événements', 'Les deux verbes décrivent le décor'],
+      answer: 1,
+      explain: 'Le décor qui dure prend l\'imparfait ; l\'événement précis, une fois, d\'un coup, prend le passé composé.'
+    },
+    {
+      q: '« Comme il faisait froid, elle a mis son manteau. » Pourquoi « faisait » est-il à l\'imparfait ?',
+      choices: ['Parce que l\'imparfait donne ici la cause, l\'explication', 'Parce que c\'est une habitude', 'Parce que c\'est un souhait poli', 'Parce que c\'est un jeu'],
+      answer: 0,
+      explain: 'Quatrième valeur : la cause et l\'explication. « Je suis resté à la maison parce que j\'étais malade » : l\'imparfait donne la raison cachée derrière ce qui s\'est passé.'
+    },
+    {
+      q: 'Après « si » pour exprimer une hypothèse, quelle construction est correcte ?',
+      choices: ['Si + conditionnel', 'Si + imparfait, et l\'autre verbe au conditionnel', 'Si + passé composé', 'Si + futur simple'],
+      answer: 1,
+      explain: '« Si j\'avais plus de temps, je lirais davantage. » Attention : jamais de conditionnel juste après « si » !'
+    },
+    {
+      q: '« Je voulais vous demander un renseignement, madame. » Quelle valeur de l\'imparfait ?',
+      choices: ['La description', 'L\'action en cours', 'La politesse : l\'imparfait adoucit la demande', 'La vérité générale'],
+      answer: 2,
+      explain: '« Je voulais », « je venais » : l\'imparfait met un petit coussin sous la demande, tout en douceur. C\'est plus doux que « je veux ».'
+    },
+    {
+      q: '« On disait que tu étais le roi et moi le dragon. » Quelle valeur de l\'imparfait ?',
+      choices: ['Le jeu et le rêve : l\'imparfait installe le monde imaginaire', 'La cause', 'L\'habitude', 'La politesse'],
+      answer: 0,
+      explain: 'Dans la cour de récré, quand on invente les règles d\'un jeu — « on dirait que... » — l\'imparfait installe le monde imaginaire.'
+    },
+    {
+      q: 'Qu\'est-ce qui prend l\'imparfait dans un récit au passé ?',
+      choices: ['L\'événement précis, une fois, d\'un coup', 'Le décor, la durée, la répétition ou l\'explication', 'Uniquement les actions futures', 'Uniquement les ordres'],
+      answer: 1,
+      explain: 'L\'imparfait pose le décor, la durée, la répétition ou l\'explication ; le passé composé donne l\'événement précis.'
+    },
+    {
+      q: '« Il pleuvait quand je suis sorti. » Pourquoi deux temps différents ?',
+      choices: ['« Il pleuvait » = le décor (imparfait) ; « je suis sorti » = l\'événement (passé composé)', 'C\'est une erreur, il faut un seul temps', '« Il pleuvait » = hypothèse ; « je suis sorti » = habitude', '« Il pleuvait » = politesse ; « je suis sorti » = cause'],
+      answer: 0,
+      explain: '« Il pleuvait », c\'est le décor qui dure ; « quand je suis sorti », c\'est l\'événement qui arrive d\'un coup.'
+    },
+    {
+      q: '« Il est arrivé en retard car son bus était en panne. » « était » exprime ici...',
+      choices: ['une habitude', 'une description du paysage', 'la cause : « car » explique pourquoi', 'un jeu imaginaire'],
+      answer: 2,
+      explain: 'Avec « car » ou « parce que », l\'imparfait explique la cause : le bus en panne, c\'est la raison du retard.'
+    }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz : Le présent de l'indicatif — cours de français</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <a href="../">← Tous les quiz</a>
+    <span class="qcount" id="count"></span>
+  </div>
+  <div class="progress"><div id="bar"></div></div>
+  <div id="quiz"></div>
+  <p class="footer">Chinguetti Académie — Le présent de l'indicatif : plusieurs pouvoirs</p>
+</div>
+<script>
+window.QUIZ_DATA = {
+  labels: {
+    question: 'Question',
+    good: '✔ Bonne réponse !',
+    bad: '✘ Mauvaise réponse',
+    next: 'Question suivante',
+    result: 'Voir le résultat',
+    restart: 'Recommencer le quiz',
+    m1: 'Parfait ! Tu connais les 7 rôles du présent 🎉',
+    m2: 'Très bien ! Revois les rôles qui t\'ont manqué.',
+    m3: 'Pas mal. Regarde de nouveau la vidéo et réessaie.',
+    m4: 'Revois la leçon, puis retente ta chance.'
+  },
+  questions: [
+    {
+      q: '« Le professeur explique la leçon. Les enfants jouent dans la cour. » Quel rôle du présent ?',
+      choices: ['Le présent de narration', 'Le présent d\'énonciation : ce qui se passe maintenant, comme une caméra en direct', 'Le présent à valeur de futur', 'Le présent de vérité générale'],
+      answer: 1,
+      explain: 'Le présent d\'énonciation filme le moment présent : « Je prépare mon cartable », maintenant, en direct.'
+    },
+    {
+      q: '« La Terre tourne autour du Soleil. L\'eau bout à 100 °C. » Quel rôle du présent ?',
+      choices: ['Le présent d\'habitude', 'Le présent de description', 'Le présent de vérité générale : toujours vrai', 'Le présent à valeur de passé récent'],
+      answer: 2,
+      explain: 'Comme le tampon magique « toujours vrai » du scientifique : « Les poissons vivent dans l\'eau », « Un triangle possède trois côtés », « Les plantes ont besoin d\'eau et de lumière ».'
+    },
+    {
+      q: '« Chaque matin, Samy se lève à 7 heures. » Quel rôle du présent ?',
+      choices: ['Le présent d\'habitude : la roue qui tourne, chaque jour on recommence', 'Le présent d\'énonciation', 'Le présent de narration', 'Le présent de description'],
+      answer: 0,
+      explain: 'L\'habitude, c\'est la roue qui tourne : « Je me brosse les dents chaque soir », « Mon père prend son café tous les matins », « Nous jouons au football chaque samedi ».'
+    },
+    {
+      q: '« En 1492, Christophe Colomb découvre l\'Amérique. » Pourquoi le présent pour un événement du passé ?',
+      choices: ['C\'est une erreur de grammaire', 'Le présent de narration : autrefois raconté comme maintenant, le livre qui devient film', 'Parce que Colomb est encore vivant', 'C\'est le présent d\'habitude'],
+      answer: 1,
+      explain: 'Le présent de narration fait voyager dans le passé comme si la scène se déroulait devant nous : « Le chevalier entre dans le château », « Les habitants prennent la forteresse » (Paris, 1789).'
+    },
+    {
+      q: '« Demain, je visite mon grand-père. » Quel rôle du présent ?',
+      choices: ['Le présent à valeur de futur : le calendrier qui regarde vers demain', 'Le présent de vérité générale', 'Le présent de passé récent', 'Le présent de description'],
+      answer: 0,
+      explain: 'L\'action n\'a pas encore commencé, mais elle est déjà programmée : « Ce soir, nous regardons un film », « La semaine prochaine, il passe son examen ».'
+    },
+    {
+      q: '« Je sors de l\'école. » (à l\'instant) Quel rôle du présent ?',
+      choices: ['Le présent d\'énonciation', 'Le présent à valeur de futur', 'Le présent à valeur de passé récent : la porte qui vient de se refermer', 'Le présent de narration'],
+      answer: 2,
+      explain: 'L\'action est terminée, mais elle est encore toute proche dans le temps : « Je sors à l\'instant », « Il arrive tout juste », « Nous terminons notre travail à l\'instant ».'
+    },
+    {
+      q: '« Le château possède trois grandes tours. La jeune fille porte une robe bleue. » Quel rôle du présent ?',
+      choices: ['Le présent de description : le peintre et son tableau, ce que l\'on voit', 'Le présent d\'habitude', 'Le présent à valeur de futur', 'Le présent de narration'],
+      answer: 0,
+      explain: 'Le narrateur décrit tout ce qu\'on voit : « Le jardin est rempli de fleurs colorées », « Son toit est rouge ».'
+    },
+    {
+      q: 'Quelle image aide à retenir le présent de vérité générale ?',
+      choices: ['La caméra, en direct', 'Le scientifique, toujours vrai', 'La roue qui tourne', 'Le calendrier, demain'],
+      answer: 1,
+      explain: 'Les 7 rôles ont chacun leur image : la caméra (maintenant), le scientifique (toujours vrai), la roue (chaque jour), le livre qui devient film (autrefois raconté), le calendrier (demain), la porte (juste avant), le peintre (ce que l\'on voit).'
+    },
+    {
+      q: 'Quelle image aide à retenir le présent à valeur de passé récent ?',
+      choices: ['La porte qui se referme', 'Le livre qui devient film', 'Le peintre et son tableau', 'La roue qui tourne'],
+      answer: 0,
+      explain: 'Le présent à valeur de passé récent, c\'est la porte qui vient de se refermer : l\'action vient de se produire, juste avant.'
+    },
+    {
+      q: 'Comment savoir quel rôle joue un verbe au présent ?',
+      choices: ['Il suffit de regarder le verbe seul', 'La valeur dépend de toute la phrase : c\'est le secret, il faut lire la phrase entière', 'C\'est toujours le présent d\'énonciation', 'On ne peut pas le savoir'],
+      answer: 1,
+      explain: 'Le secret : la valeur dépend de ce que la phrase veut exprimer. Il faut lire toute la phrase pour choisir le bon rôle.'
+    }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>
