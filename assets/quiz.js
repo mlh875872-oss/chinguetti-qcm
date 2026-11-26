@@ -23,6 +23,13 @@
       '</div>';
     root.innerHTML = html;
     root.querySelector('.question').textContent = q.q;
+    if (q.svg) {
+      var ill = document.createElement('div');
+      ill.className = 'illustration';
+      ill.innerHTML = q.svg;
+      var cardEl = root.querySelector('.card');
+      cardEl.insertBefore(ill, cardEl.querySelector('.question'));
+    }
     var box = root.querySelector('.choices');
     q.choices.forEach(function (c, idx) {
       var b = document.createElement('button');
