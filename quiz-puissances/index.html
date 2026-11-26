@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz : Les puissances — maths 5ème</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <a href="../">← Tous les quiz</a>
+    <span class="qcount" id="count"></span>
+  </div>
+  <div class="progress"><div id="bar"></div></div>
+  <div id="quiz"></div>
+  <p class="footer">Chinguetti Académie — Les puissances : carrés, cubes et priorités de calcul</p>
+</div>
+<script>
+window.QUIZ_DATA = {
+  labels: {
+    question: 'Question',
+    good: '✔ Bonne réponse !',
+    bad: '✘ Mauvaise réponse',
+    next: 'Question suivante',
+    result: 'Voir le résultat',
+    restart: 'Recommencer le quiz',
+    m1: 'Parfait ! Les puissances n\'ont plus de secret pour toi 🎉',
+    m2: 'Très bien ! Revois les questions qui t\'ont manqué.',
+    m3: 'Pas mal. Regarde de nouveau la vidéo et réessaie.',
+    m4: 'Revois la leçon, puis retente ta chance.'
+  },
+  questions: [
+    {
+      q: 'Écris 7 × 7 × 7 avec une puissance, puis calcule-la.',
+      choices: ['7 × 3 = 21', '7³ = 343', '3⁷ = 2 187', '7³ = 147'],
+      answer: 1,
+      explain: 'Le 7 est multiplié 3 fois par lui-même : 7³ = 7 × 7 × 7 = 49 × 7 = 343.'
+    },
+    {
+      q: 'Dans 2⁴, comment s\'appelle le petit 4 ?',
+      choices: ['La base', 'L\'exposant : c\'est le petit chef qui compte les fois', 'Le facteur', 'Le produit'],
+      answer: 1,
+      explain: 'L\'exposant compte combien de fois on multiplie la base par elle-même. Ici : 4 fois.'
+    },
+    {
+      q: 'Dans 2⁴, que représente le 2 ?',
+      choices: ['L\'exposant', 'Le résultat', 'La base : le nombre qu\'on multiplie', 'Le nombre de fois'],
+      answer: 2,
+      explain: 'La base, c\'est le nombre qu\'on multiplie. 2⁴ = 2 × 2 × 2 × 2.'
+    },
+    {
+      q: 'Attention au piège n°1 : combien vaut 2⁴ ?',
+      choices: ['8, car 2 × 4 = 8', '16, car 2 × 2 × 2 × 2 = 16', '6, car 2 + 4 = 6', '24'],
+      answer: 1,
+      explain: 'L\'exposant n\'est pas une multiplication ! 2⁴ = 2 × 2 × 2 × 2 = 16, pas 2 × 4.'
+    },
+    {
+      q: 'Calcule : 4 + 3 × 2³',
+      choices: ['56', '28', '20', '96'],
+      answer: 1,
+      explain: 'La puissance d\'abord : 2³ = 8. Puis la multiplication : 3 × 8 = 24. Enfin l\'addition : 4 + 24 = 28.'
+    },
+    {
+      q: 'Calcule : (2 + 3)² − 10',
+      choices: ['15', '0', '35', '11'],
+      answer: 0,
+      explain: 'Les parenthèses sont les cheffes : (2 + 3) = 5, puis 5² = 25, et 25 − 10 = 15.'
+    },
+    {
+      q: 'Combien vaut 10⁵ ?',
+      choices: ['50', '10 000', '100 000', '1 000 000'],
+      answer: 2,
+      explain: 'Avec les puissances de 10, l\'exposant compte les zéros : 10⁵ = 1 suivi de 5 zéros = 100 000.'
+    },
+    {
+      q: 'Les carrés parfaits sont à connaître par cœur : combien vaut 12² ?',
+      choices: ['24', '124', '144', '121'],
+      answer: 2,
+      explain: '12² = 12 × 12 = 144. La liste à retenir : 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144.'
+    },
+    {
+      q: 'Dans 2 + 5 × 3², que calcule-t-on en premier ?',
+      choices: ['L\'addition 2 + 5', 'La multiplication 5 × 3', 'La puissance 3²', 'On calcule de gauche à droite'],
+      answer: 2,
+      explain: 'Toujours dans cet ordre : 1. les parenthèses, 2. les puissances, 3. × et ÷, 4. + et −. Donc 3² = 9 d\'abord, puis 5 × 9 = 45, puis 2 + 45 = 47.'
+    },
+    {
+      q: 'Combien vaut 5¹ ?',
+      choices: ['5', '1', '0', '51'],
+      answer: 0,
+      explain: 'Puissance 1 : un seul exemplaire de la base. 5¹ = 5.'
+    }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>
